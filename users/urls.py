@@ -10,8 +10,13 @@ urlpatterns = [
 
     # Management
     path(
-        route='/',
-        view=views.HoliView.as_view(),
+        route='signup/',
+        view=views.SignupView.as_view(),
         name='signup'
+    ),
+    path(
+        route='login/',
+        view=views.LoginView.as_view(),
+        name='login'
     ),
 ]
