@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>Personal Blog</title>
+    <body>
+        {% include "navwelcome.html" %}
+    </body>
+{% endblock%}
+
+{% block container %}
+    
+<section class="welcome">
+    <div class="welcome-inner">
+        <h1>Welcome to your personal blog!</h1>
+        <h2>Best place to store your stories, Lets start now!</h2>
+        <button class="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="button" onclick="window.location.href='{% url "users:signup"  %}'">Start postig now</button>
+    </div>
+</section>
+
+
+{% endblock %}
+
