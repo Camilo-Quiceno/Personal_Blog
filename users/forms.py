@@ -49,3 +49,5 @@ class SignupForm(forms.Form):
 
         user = User.objects.create_user(**data)
        
+
+

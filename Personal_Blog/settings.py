@@ -140,5 +140,5 @@ STATICFILES_FINDER = [
 ]
 
 LOGIN_URL = '/users/login' 
-LOGIN_REDIRECT_URL = '/users/signup' 
+LOGIN_REDIRECT_URL = '/feed/' 
 LOGOUT_REDIRECT_URL = LOGIN_URL

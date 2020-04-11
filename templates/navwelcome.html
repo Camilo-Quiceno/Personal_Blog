@@ -1,7 +1,6 @@
 <nav class="navbar " id="main-navbar">
     <a class="navbar-brand text-dark"  href="{% url "posts:welcome"  %}">Your personal blog.</a>
     <form class="form-inline my-2 my-lg-0">
-      
       <button class="btn btn-sm btn-outline-secondary mr-sm-2" type="button" onclick="window.location.href='{% url "users:signup"  %}'">Star your blog!</button>
       <button class="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="button" onclick="window.location.href='{% url "users:login"  %}'">Login</button>
     </form>

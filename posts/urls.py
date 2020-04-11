@@ -14,4 +14,13 @@ urlpatterns = [
         view=views.WelcomeView.as_view(),
         name='welcome'
     ),
+    path(
+        route='feed/',
+        view=views.FeedView.as_view(),
+        name='feed'
+    ),
+    path(
+        'newpost/', 
+        views.NewPostView,
+        name="newpost"), 
 ]

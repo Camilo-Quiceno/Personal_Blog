@@ -19,4 +19,6 @@ urlpatterns = [
         view=views.LoginView.as_view(),
         name='login'
     ),
+    
+
 ]

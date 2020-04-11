@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+<title>Feed</title>
+{% include "navwelcome.html" %}
+{% endblock %}
+
+{% block container %}
+
+<h1>Your posts...</h1>
+
+<div class="fab"> 
+    <a a class="text-dark" style="text-decoration: none;" href="{% url "posts:newpost"  %}">+</a>
+</div>
+    
+{% endblock %}
