@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     
-    category_name = models.CharField(max_length=30)
+    category_name = models.CharField(max_length=30,unique=True)
 
 
 class Post(models.Model):
@@ -20,7 +20,7 @@ class Post(models.Model):
 
 class Tag(models.Model):
     
-    tag_name = models.CharField(max_length=30)
+    tag_name = models.CharField(max_length=30,unique=True)
 
 class Post_Tag(models.Model):
 
