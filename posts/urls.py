@@ -24,5 +24,11 @@ urlpatterns = [
         'newpost/', 
         views.NewPostView,
         name="newpost"
-        ), 
+        ),
+    path(
+        route='posts/<int:pk>/',
+        view=views.PostDetailView, 
+        name='postdetail'
+    ),  
+        
 ]

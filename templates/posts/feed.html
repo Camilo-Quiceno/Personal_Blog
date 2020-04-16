@@ -1,16 +1,31 @@
 {% extends "base.html" %}
 
 {% block head_content %}
-<title>Feed</title>
-{% include "navwelcome.html" %}
+    <title>Feed</title>
+    {% include "nav.html" %}
 {% endblock %}
 
 {% block container %}
 
 <h1>Your posts...</h1>
 
-<div class="fab"> 
-    <a a class="text-dark" style="text-decoration: none;" href="{% url "posts:newpost"  %}">+</a>
-</div>
-    
+{% for post in posts %}
+    <div class="card">
+        <div class="card-header">
+                Post: {{ post.date_created}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">Tags: {{post.Tags}}</p>
+            <a href="{% url "posts:postdetail" post.id %}" class="btn btn-secondary">Visit post</a>
+        </div>
+    </div>
+{% endfor %}
+
+    <div class="fab"> 
+        <a a class="text-dark" style="text-decoration: none;" href="{% url "posts:newpost"  %}">+</a>
+    </div>
+
+
+{% include "pagination.html" %}   
 {% endblock %}
